@@ -14,23 +14,28 @@
 </div>
 
 <div class="games">
-  <div class="game">
-    <div class="game-thumb-container">
-      <img
-        src="https://image.api.playstation.com/vulcan/img/rnd/202102/0422/TkQfZ0v0NF1p8YHovQPIYtr5.png"
-        alt="thumbnail"
-        class="game-thumbnail"
-      />
-    </div>
-    <div class="game-description">
-      <p class="game-name">Name</p>
-      <div class="game-platforms">
+  <ng-container *ngFor="let game of games">
+    <div class="game">
+      <div class="game-thumb-container">
         <img
-          class="game-platform"
-          src="https://cdn-icons-png.flaticon.com/512/1/1321.png"
-          alt="slug"
+          *ngIf="game.background_image"
+          src="{{ game.background_image }}"
+          alt="thumbnail"
+          class="game-thumbnail"
         />
+        <p *ngIf="!game.background_image">No Image</p>
+      </div>
+      <div class="game-description">
+        <p class="game-name">{{ game.name }}</p>
+        <div class="game-platforms">
+          <img
+            *ngFor="let gamePlatform of game.parent_platforms"
+            class="game-platform"
+            src="assets/images/platforms/{{ gamePlatform.platform.slug }}.svg"
+            alt="{{ gamePlatform.platform.slug }}"
+          />
+        </div>
       </div>
     </div>
-  </div>
+  </ng-container>
 </div>
