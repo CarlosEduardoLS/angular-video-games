@@ -34,10 +34,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   searchGames(sort: string, search?: string): void {
     this.gameSub = this.httpService
       .getGameList(sort, search)
-      .subscribe((gameList: APIResponse<Game>) => {
-        this.games = gameList.results;
-        console.log('Game List -> ', gameList);
-      });
+      .subscribe(
+        (gameList: APIResponse<Game>) => (this.games = gameList.results)
+      );
   }
 
   openGameDetails(id: string): void {
