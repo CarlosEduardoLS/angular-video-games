@@ -4,7 +4,6 @@
     height: 60px;
     background-color: #323a45;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     position: fixed;
     top: 0;
@@ -13,6 +12,8 @@
   }
 
   &-form {
+    display: flex;
+    justify-content: center;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -54,5 +55,7 @@
   color: #fff;
   font-weight: 700;
   cursor: pointer;
+  display: flex;
+  align-items: center;
   text-decoration: none;
 }

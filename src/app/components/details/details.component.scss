@@ -24,6 +24,8 @@
       fill: #fff;
       font-weight: 700;
       font-size: 24px;
+      font-weight: 600;
+      text-shadow: 1px 1px 1px grey;
     }
   }
 
@@ -33,10 +35,12 @@
     right: 0;
 
     &-label {
-      font-size: 20px;
-      color: #fff;
-      position: relative;
       bottom: 60px;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      position: relative;
+      text-shadow: 1px 1px 1px grey;
     }
   }
 }

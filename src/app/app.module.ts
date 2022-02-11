@@ -17,16 +17,20 @@ import { HttpHeadersInterceptor } from './interceptors/http-headers.interceptor'
 import { HttpErrorsInterceptor } from './interceptors/http-errors.interceptor';
 import { DetailsComponent } from './components/details/details.component';
 import { GameTabsComponent } from './components/game-tabs/game-tabs.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchBarComponent,
     HomeComponent,
     DetailsComponent,
     GameTabsComponent,
+    SearchBarComponent,
   ],
   imports: [
+    MatCardModule,
+    MatProgressSpinnerModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
