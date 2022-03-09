@@ -26,7 +26,7 @@ interface Genre {
 interface ParentPlatform {
   platform: {
     slug: string;
-  ***REMOVED***
+  };
 }
 
 interface Publishers {
@@ -46,5 +46,5 @@ interface Screenshots {
 interface Trailer {
   data: {
     max: string;
-  ***REMOVED***
+  };
 }
